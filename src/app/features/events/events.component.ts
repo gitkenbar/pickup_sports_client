@@ -33,7 +33,7 @@ export class EventsComponent implements OnInit{
         this.totalPages = response.total_pages;
         console.log(this.events, this.currentPage, this.totalPages)
       },
-      error: (error:any) => {
+      error: (error:any) =>{
         console.error("error fetching events", error)
       }
     })

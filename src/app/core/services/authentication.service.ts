@@ -23,6 +23,7 @@ export class AuthenticationService {
   }
 
   getToken(){
+    //TODO: check to see if token is still valid
     return localStorage.getItem('token')
   }
 
