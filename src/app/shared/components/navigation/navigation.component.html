@@ -2,6 +2,7 @@
   <div class="brand-name">Pickup Sports</div>
   <div class="nav-links">
     @if (isLoggedIn()){
+      <span>Welcome, {{currentUser?.first_name}}</span>
       <a (click)="logout()">Logout</a>}
      @else{
       <a routerLink="/login">Login</a>}

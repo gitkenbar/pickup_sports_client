@@ -8,12 +8,12 @@ import { environment } from '../../../environments/environment';
   providedIn: 'root'
 })
 export class UserService {
-  currentUserSubject = new BehaviorSubject<User | null>(null);
+  currentUserBehaviorSubject = new BehaviorSubject<User | null>(null);
 
   constructor(private http:HttpClient) { }
 
   setCurrentUser(user: User | null) {
-    this.currentUserSubject.next(user);
+    this.currentUserBehaviorSubject.next(user);
   }
 
   getBootstrapData() {
